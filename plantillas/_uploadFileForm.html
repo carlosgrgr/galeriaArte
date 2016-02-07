@@ -1,0 +1,39 @@
+<div class="tabs">
+    <ul class="nav nav-tabs tabs-primary">
+        <li class="active">
+            <a href="#" data-toggle="tab">New</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="edit" class="tab-pane active">
+
+            <form action="?action=insert&do=set" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="pkEmail" value="{pkEmail}"/>
+                <h4 class="mb-xlg">New Art</h4>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="nombre">Art name</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="archivo">File</label>
+                        <div class="col-md-8">
+                            <input type="file" class="form-control" id="archivo" name="archivo">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-3">
+                            <input type="submit" class="btn btn-primary" value="Upload" />
+                            <button type="reset" class="btn btn-default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
