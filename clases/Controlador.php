@@ -11,10 +11,8 @@ class Controlador {
         $do = Request::req("do");
         $metodo = $action . ucfirst($do);
         if (method_exists(get_class(), $metodo)) {
-            echo "El método existe";
             self::$metodo($gestor, $gestorArtista);
         } else {
-            echo "El método no existe";
             self::readView($gestor);
         }
     }

@@ -16,10 +16,8 @@ class ControladorArtista {
         $do = Request::req("do");
         $metodo = $action . ucfirst($do);
         if (method_exists(get_class(), $metodo)) {
-            echo "El método existe";
             self::$metodo($gestor, $sesion);
         } else {
-            echo "El método no existe";
             self::readView($gestor, $sesion);
         }
     }
